@@ -12,7 +12,7 @@ stage('mvn packege'){
 }
 stage('deploy tomcat'){
    
-    bat "target\bin\webapp.bat"
+    bat "target\\bin\\webapp.bat"
 
 }
 
