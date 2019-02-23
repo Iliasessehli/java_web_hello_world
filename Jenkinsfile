@@ -17,7 +17,7 @@ stage('deploy'){
     bat "${mvnHome}\\bin\\mvn clean deploy"
 
 }
-stage('deploy tomcat'){
+stage(' tomcat'){
    
     bat "target\\bin\\webapp.bat"
 
