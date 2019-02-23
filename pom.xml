@@ -6,10 +6,29 @@
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>embeddedTomcatSample Maven Webapp</name>
-  <url>http://maven.apache.org</url>
+
   <properties>
     <tomcat.version>7.0.57</tomcat.version>
   </properties>
+  
+  
+  <distributionManagement>
+    <repository>
+      <uniqueVersion>false</uniqueVersion>
+      <id>release</id>
+      <name>Corporate Repository</name>
+      <url>http://localhost:8081/repository/maven-releases/</url>
+      <layout>default</layout>
+    </repository>
+    <snapshotRepository>
+      <uniqueVersion>true</uniqueVersion>
+      <id>snapshot</id>
+      <name>Propellors Snapshots</name>
+      <url>http://localhost:8081/repository/maven-snapshots/</url>
+      <layout>legacy</layout>
+    </snapshotRepository>
+  </distributionManagement>
+  
   <dependencies>
     <dependency>
         <groupId>org.apache.tomcat.embed</groupId>
@@ -51,8 +70,8 @@
            <version>2.3.2</version>
            <inherited>true</inherited>
            <configuration>
-                 <source>1.6</source>
-                 <target>1.6</target>
+                 <source>1.8</source>
+                 <target>1.8</target>
             </configuration>
         </plugin>
         <plugin>
