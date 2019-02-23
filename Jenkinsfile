@@ -5,6 +5,7 @@ stage('prepare'){
     
 
 }
+
 stage('package'){
     def mvnHome = tool 'maven_3.6.0'
     bat "${mvnHome}\\bin\\mvn clean package"
